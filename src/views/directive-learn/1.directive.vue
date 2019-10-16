@@ -55,6 +55,42 @@
         {{ item }}
       </div>
     </div>
+
+    <div class="v-model">
+      <span>{{ value_1 }}</span>
+      <input type="text" v-model="value_1" />
+      <input type="number" v-model.lazy="value_1" />
+      <input type="tel" v-model.number="value_1" />
+      <hr />
+      <input id="linkFor" type="checkbox" v-model="isOrNo" />
+      <label for="linkFor">{{ isOrNo }}</label>
+      <fieldset>
+        <legend style="text-align:left">多选框</legend>
+        <span>{{ names }}</span>
+        <input type="checkbox" v-model="names" value="zizi" id="value_1" />
+        <label for="value_1">孜孜</label>
+        <input type="checkbox" v-model="names" value="zaza" id="value_2" />
+        <label for="value_2">咋咋</label>
+        <input type="checkbox" v-model="names" value="lolo" id="value_3" />
+        <label for="value_3">咯咯</label>
+      </fieldset>
+      <fieldset>
+        <legend>单选框</legend>
+        <span>{{ generator }}</span>
+        <input id="girl" type="radio" value="1" v-model="generator" />
+        <label for="girl">女</label>
+        <input id="boy" type="radio" value="0" v-model="generator" />
+        <label for="boy">男</label>
+      </fieldset>
+      <fieldset>
+        <legend>v-model默认绑定input事件</legend>
+        <input
+          type="text"
+          v-model="value"
+          @keyup.enter="noChange('hello是不能修改的')"
+        />
+      </fieldset>
+    </div>
   </div>
 </template>
 
@@ -75,7 +111,12 @@ export default {
         from: "China",
         owner: "Dennis"
       },
-      setIntervalData: []
+      setIntervalData: [],
+      value_1: "",
+      isOrNo: true,
+      names: [],
+      generator: "",
+      value: ""
     };
   },
   computed: {
@@ -95,11 +136,18 @@ export default {
           clearInterval(timer);
         }
       }, 1000);
+    },
+    noChange(val = "hello") {
+      this.value = val;
     }
   }
 };
 </script>
 <style scoped>
+input {
+  display: block;
+  margin: 0 auto;
+}
 .red {
   color: red;
 }

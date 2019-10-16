@@ -10,3 +10,5 @@
 5.setInterval的使用和清除。
   a) 定义timer，timer变量赋值一个定时器
   b) 在定时器中可以定义一些方式来清除定时器
+6.input标签的id属性与label的for属性将两者链接起来。点击label同时可以实现点击input的效果。（限于CheckBox和radio）
+7.v-model 绑定的事件默认是input事件。
