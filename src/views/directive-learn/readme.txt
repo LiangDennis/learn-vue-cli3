@@ -12,3 +12,7 @@
   b) 在定时器中可以定义一些方式来清除定时器
 6.input标签的id属性与label的for属性将两者链接起来。点击label同时可以实现点击input的效果。（限于CheckBox和radio）
 7.v-model 绑定的事件默认是input事件。
+8.computed计算属性中的每一个属性都需要使用匿名函数返回，而且不能使用箭头函数，否则this的指向会出现问题。补充：也可以使用 () {} 函数增强模式。
+9.computed计算属性也可以设置setter的方式，在某些时候可以改变计算属性的值。
+10.有一个lodash的插件，即可以实现节流和防抖的功能，https://lodash.com/docs#debounce。
+11.可以在created的生命函数中定义一些参数，使用this进行定义，也可以指向一些methods中的方法。使用方式为：this.someData 会创建一个someData的值，可以在其他地方想data里面的数据进行使用；this.fun = this.method，使得fun指向method 方法。
