@@ -29,6 +29,11 @@ export default new Router({
       path: "/computed",
       name: "computed",
       component: () => import("./views/directive-learn/2.computed.vue")
+    },
+    {
+      path: "/classstyle",
+      name: "classstyle",
+      component: () => import("./views/directive-learn/3.classStyle.vue")
     }
   ]
 });
