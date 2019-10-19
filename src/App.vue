@@ -5,7 +5,10 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/directive">directive</router-link> |
       <router-link to="/computed">computed</router-link> |
-      <router-link to="/classstyle">classstyle</router-link>
+      <router-link to="/classstyle">classstyle</router-link> |
+      <router-link to="/vif">vif</router-link> |
+      <router-link to="/vfor">vfor</router-link> |
+      <router-link to="/vforexample">vforexample</router-link> |
     </div>
     <router-view />
   </div>

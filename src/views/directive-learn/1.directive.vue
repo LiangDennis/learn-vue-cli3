@@ -56,7 +56,7 @@
       </div>
     </div>
 
-    <div class="v-model">
+    <div class="vmodel">
       <span>{{ value_1 }}</span>
       <input type="text" v-model="value_1" />
       <input type="number" v-model.lazy="value_1" />
